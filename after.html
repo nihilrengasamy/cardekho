@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <link rel="stylesheet" typr="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <center>
+
+        <h2><b>CLASSIFICATION : </b></h2>
+    {%if data == 0%}
+    <div class="nonvpn">
+        <body bgcolor="#ffcbcb">
+            <img src="static\nonvpnresize.png">
+        </body>
+    </div>
+
+    {%else%}
+    <div class="vpn">
+        <body bgcolor="#a3cfb4">
+            <img src='static\vpnresize.png'>
+        </body>
+    </div>
+    {%endif%}
+
+        <br><br>
+    <a href='/'><button class="button-86" role="button">HOME PAGE!</button></a>
+
+    </center>
+
+</body>
+
+</html>

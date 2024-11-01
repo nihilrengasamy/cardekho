@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <h2>Car Price Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="fueltype">fueltype:</label><br>
+        <input type="number" id="fueltype" name="fueltype" required><br><br>
+
+        <label for="aspiration">aspiration:</label><br>
+        <input type="number" id="aspiration" name="aspiration" required><br><br>
+
+        <label for="doornumber">doornumber:</label><br>
+        <input type="number" id="doornumber" name="doornumber" required><br><br>
+
+        <label for="carbody">carbody:</label><br>
+        <input type="number" id="carbody" name="carbody" required><br><br>
+
+        <label for="drivewheel">drivewheel:</label><br>
+        <input type="number" id="drivewheel" name="drivewheel" required><br><br>
+
+        <label for="enginelocation">enginelocation:</label><br>
+        <input type="number" id="enginelocation" name="enginelocation" required><br><br>
+
+        <label for="carlength">carlen:</label><br>
+        <input type="number" id="carlength" name="carlength" required><br><br>
+
+        <label for="carwidth">carwidth:</label><br>
+        <input type="number" id="carwidth" name="carwidth" required><br><br>
+
+        <label for="carheight">enginelocation:</label><br>
+        <input type="number" id="carheight" name="carheight" required><br><br>
+
+        <label for="curbweight">wheelbase:</label><br>
+        <input type="number" id="curbweight" name="curbweight" required><br><br>
+        
+        <label for="enginetype">enginetype:</label><br>
+        <input type="number" id="enginetype" name="enginetype" required><br><br>
+
+        <label for="horsepower">horsepower:</label><br>
+        <input type="number" id="horsepower" name="horsepower" required><br><br>
+
+        <label for="peakrpm">peakrpm:</label><br>
+        <input type="number" id="peakrpm" name="peakrpm" required><br><br>
+
+        <!-- Add other inputs as per your model -->
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
